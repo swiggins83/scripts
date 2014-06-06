@@ -1,2 +1,2 @@
 #!/bin/bash
-vim -p $(git status | grep modified | cut -d: -f2)
+vim -p $(git status | grep -E 'modified|new file' | cut -d: -f2)
